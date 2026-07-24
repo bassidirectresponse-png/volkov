@@ -26,9 +26,21 @@ test("server-renders the VOLKOV home page", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Independent Wellness Research — VOLKOV/);
-  assert.match(html, /HEALTH,/);
+  assert.match(html, />HEALTH,</);
   assert.match(html, /CLEARLY\./);
   assert.match(html, /VOLKOV LTDA/);
+  assert.match(html, /src="\/images\/volkov-research-desk\.jpg"/);
+  for (const image of [
+    "supplement-label",
+    "ingredient-comparison",
+    "third-party-testing",
+    "wellness-claims",
+    "sustainable-habits",
+    "healthcare-appointment",
+  ]) {
+    assert.match(html, new RegExp(`src="/images/${image}\\.jpg"`));
+  }
+  assert.doesNotMatch(html, /src="\/_vinext\/image/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
 

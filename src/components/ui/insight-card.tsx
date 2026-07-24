@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Insight } from "@/src/content/insights";
 
@@ -12,12 +11,17 @@ export function InsightCard({
   return (
     <article className="insight-card">
       <Link href={`/insights/${insight.slug}`} className="insight-image">
-        <Image
+        {/* Serve the local editorial asset directly because the Sites image
+            optimizer is not available consistently in every worker request. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={insight.image}
           alt={insight.imageAlt}
-          fill
-          sizes="(max-width: 720px) 100vw, 50vw"
-          priority={priority}
+          width="500"
+          height="500"
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : "auto"}
+          decoding="async"
         />
         <span className="read-badge">READ</span>
       </Link>

@@ -525,6 +525,328 @@ p {
   }
 }
 
+.cinematic-hero {
+  position: relative;
+  min-height: 320svh;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.cinematic-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 680px;
+  overflow: hidden;
+  isolation: isolate;
+  perspective: 1500px;
+}
+
+.cinematic-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cinematic-atmosphere::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(150deg, rgb(255 255 255 / 4%), transparent 42%),
+    linear-gradient(0deg, rgb(0 0 0 / 28%), transparent 60%);
+}
+
+.cinematic-atmosphere span {
+  position: absolute;
+  width: min(58vw, 760px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  opacity: 0.17;
+  filter: blur(120px);
+}
+
+.cinematic-atmosphere span:first-child {
+  top: -36%;
+  right: -12%;
+  background: var(--color-sage);
+}
+
+.cinematic-atmosphere span:last-child {
+  bottom: -42%;
+  left: -16%;
+  background: var(--color-soft-blue);
+}
+
+.cinematic-intro,
+.cinematic-cta {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: var(--shell);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  will-change: transform, opacity, filter;
+}
+
+.cinematic-intro > p,
+.cinematic-cta > p,
+.dossier-copy > p {
+  margin-bottom: clamp(24px, 4vh, 46px);
+  color: var(--color-sage);
+  font-size: 0.69rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.cinematic-intro h1 {
+  max-width: 9ch;
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(4.5rem, 12vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.78;
+}
+
+.cinematic-intro h1 span,
+.cinematic-intro h1 strong {
+  display: block;
+  font: inherit;
+}
+
+.cinematic-intro h1 strong {
+  color: var(--color-sage);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-sage);
+}
+
+.cinematic-brand-line {
+  max-width: 640px;
+  margin-top: clamp(44px, 7vh, 76px);
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  color: #dce5df;
+  font-size: 0.78rem;
+}
+
+.cinematic-brand-line span:first-child {
+  color: var(--color-white);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.cinematic-dossier {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: 3;
+  width: min(1180px, calc(100vw - 64px));
+  height: min(74svh, 720px);
+  min-height: 560px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  grid-template-rows: 1fr auto;
+  border-radius: 14px;
+  background: #111814;
+  box-shadow:
+    0 34px 70px rgb(0 0 0 / 36%),
+    inset 0 1px rgb(255 255 255 / 9%);
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  will-change: transform, opacity, filter;
+}
+
+.dossier-sheen {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(
+    650px circle at var(--pointer-x) var(--pointer-y),
+    rgb(255 255 255 / 7%),
+    transparent 48%
+  );
+}
+
+.dossier-image {
+  position: relative;
+  grid-row: 1 / -1;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, #384a40, #151d18 68%),
+    var(--color-primary);
+}
+
+.dossier-image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, transparent 58%, rgb(17 24 20 / 50%)),
+    linear-gradient(0deg, rgb(17 24 20 / 44%), transparent 55%);
+  pointer-events: none;
+}
+
+.dossier-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.72) contrast(1.04);
+  will-change: transform;
+}
+
+.dossier-image > span {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  z-index: 2;
+  color: rgb(255 255 255 / 72%);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.dossier-copy {
+  align-self: end;
+  padding: clamp(30px, 4vw, 58px) clamp(28px, 4vw, 54px) 30px;
+  will-change: transform, opacity;
+}
+
+.dossier-copy > p {
+  margin-bottom: 16px;
+  color: var(--color-sage);
+}
+
+.dossier-copy h2 {
+  max-width: 10ch;
+  margin-bottom: 20px;
+  color: var(--color-white);
+  font-family: var(--display);
+  font-size: clamp(2.65rem, 4.3vw, 4.8rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.88;
+}
+
+.dossier-copy > span {
+  max-width: 42ch;
+  display: block;
+  color: #c8d3cc;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.evidence-list {
+  padding: 0 clamp(28px, 4vw, 54px) 34px;
+  display: flex;
+  flex-direction: column;
+}
+
+.evidence-point {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid rgb(255 255 255 / 11%);
+  will-change: transform, opacity;
+}
+
+.evidence-point svg {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+  color: var(--color-sage);
+  stroke-width: 1.6;
+}
+
+.evidence-point div {
+  display: flex;
+  flex-direction: column;
+}
+
+.evidence-point strong {
+  color: var(--color-white);
+  font-size: 0.76rem;
+}
+
+.evidence-point span {
+  color: #aebcb3;
+  font-size: 0.68rem;
+}
+
+.cinematic-cta {
+  z-index: 2;
+  max-width: 850px;
+  align-items: flex-start;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.cinematic-cta > * {
+  pointer-events: auto;
+}
+
+.cinematic-cta > p {
+  margin-bottom: 24px;
+}
+
+.cinematic-cta h2 {
+  max-width: 11ch;
+  margin-bottom: 26px;
+  font-family: var(--display);
+  font-size: clamp(3.7rem, 8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.86;
+}
+
+.cinematic-cta > span {
+  max-width: 57ch;
+  color: #d4ded7;
+  font-size: clamp(0.95rem, 1.3vw, 1.12rem);
+}
+
+.cinematic-cta .button-row {
+  margin-top: 34px;
+}
+
+.cinematic-scroll-cue {
+  position: absolute;
+  right: max(32px, calc((100vw - 1280px) / 2));
+  bottom: 28px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-sage);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cinematic-scroll-cue svg {
+  width: 17px;
+  animation: scroll-cue 1.8s ease-in-out infinite;
+}
+
 .who-we-are {
   padding: clamp(90px, 13vw, 180px) max(32px, calc((100vw - 1280px) / 2));
   background: var(--color-light);
@@ -608,6 +930,9 @@ p {
 }
 
 .insight-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
   object-position: center;
   filter: saturate(0.7);
@@ -2346,6 +2671,106 @@ p {
     padding-block: 10px;
   }
 
+  .cinematic-hero {
+    min-height: 280svh;
+  }
+
+  .cinematic-stage {
+    min-height: 620px;
+  }
+
+  .cinematic-intro,
+  .cinematic-cta {
+    width: calc(100vw - 36px);
+    padding-top: 58px;
+  }
+
+  .cinematic-intro {
+    justify-content: center;
+  }
+
+  .cinematic-intro > p {
+    max-width: 32ch;
+    margin-bottom: 30px;
+    font-size: 0.62rem;
+  }
+
+  .cinematic-intro h1 {
+    font-size: clamp(4rem, 21vw, 5.5rem);
+    line-height: 0.82;
+  }
+
+  .cinematic-intro h1 strong {
+    -webkit-text-fill-color: var(--color-sage);
+    -webkit-text-stroke: 0;
+  }
+
+  .cinematic-brand-line {
+    margin-top: 46px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .cinematic-dossier {
+    width: calc(100vw - 28px);
+    height: min(78svh, 690px);
+    min-height: 590px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(210px, 0.9fr) auto auto;
+  }
+
+  .dossier-image {
+    grid-row: auto;
+  }
+
+  .dossier-image::after {
+    background: linear-gradient(0deg, rgb(17 24 20 / 54%), transparent 72%);
+  }
+
+  .dossier-copy {
+    padding: 22px 22px 12px;
+  }
+
+  .dossier-copy > p {
+    margin-bottom: 10px;
+  }
+
+  .dossier-copy h2 {
+    max-width: 12ch;
+    margin-bottom: 12px;
+    font-size: clamp(2.25rem, 10.4vw, 3.2rem);
+    line-height: 0.92;
+  }
+
+  .dossier-copy > span {
+    font-size: 0.75rem;
+  }
+
+  .evidence-list {
+    padding: 0 22px 17px;
+  }
+
+  .evidence-point {
+    padding: 9px 0;
+  }
+
+  .evidence-point:nth-child(3) {
+    display: none;
+  }
+
+  .cinematic-cta {
+    justify-content: center;
+  }
+
+  .cinematic-cta h2 {
+    font-size: clamp(3.4rem, 17vw, 5rem);
+  }
+
+  .cinematic-scroll-cue {
+    display: none;
+  }
+
   .hero {
     min-height: 820px;
     padding: 130px 18px 70px;
@@ -2652,6 +3077,54 @@ p {
 
   .exploded-view {
     height: auto;
+  }
+
+  .cinematic-hero {
+    min-height: 0;
+  }
+
+  .cinematic-stage {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    padding: 140px 0 90px;
+    overflow: hidden;
+  }
+
+  .cinematic-intro,
+  .cinematic-cta {
+    position: relative;
+    inset: auto;
+    min-height: 0;
+    padding: 0;
+    opacity: 1;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .cinematic-dossier {
+    position: relative;
+    inset: auto;
+    width: var(--shell);
+    height: min(70svh, 680px);
+    margin: 76px auto;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .dossier-copy,
+  .evidence-point {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .cinematic-cta {
+    margin: 0 auto;
+  }
+
+  .cinematic-scroll-cue {
+    display: none;
   }
 }
 

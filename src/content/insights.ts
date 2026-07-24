@@ -28,7 +28,7 @@ export const insights: Insight[] = [
     published: "2026-06-10",
     updated: "2026-07-18",
     readingTime: "9 min read",
-    image: "/images/volkov-research-desk.jpg",
+    image: "/images/supplement-label.jpg",
     imageAlt:
       "A neutral paper label, magnifying glass and botanical materials arranged on a dark desk",
     sections: [
@@ -101,7 +101,7 @@ export const insights: Insight[] = [
     published: "2026-05-21",
     updated: "2026-07-16",
     readingTime: "10 min read",
-    image: "/images/volkov-research-desk.jpg",
+    image: "/images/ingredient-comparison.jpg",
     imageAlt:
       "Research notes and botanical reference cards arranged in a careful grid",
     sections: [
@@ -174,7 +174,7 @@ export const insights: Insight[] = [
     published: "2026-05-02",
     updated: "2026-07-11",
     readingTime: "9 min read",
-    image: "/images/volkov-research-desk.jpg",
+    image: "/images/third-party-testing.jpg",
     imageAlt:
       "Abstract glass vessels, paper records and natural materials in soft daylight",
     sections: [
@@ -241,7 +241,7 @@ export const insights: Insight[] = [
     published: "2026-04-14",
     updated: "2026-07-08",
     readingTime: "11 min read",
-    image: "/images/volkov-research-desk.jpg",
+    image: "/images/wellness-claims.jpg",
     imageAlt:
       "Layered headlines and evidence notes separated across an editorial work surface",
     sections: [
@@ -315,7 +315,7 @@ export const insights: Insight[] = [
     published: "2026-03-28",
     updated: "2026-07-03",
     readingTime: "9 min read",
-    image: "/images/volkov-research-desk.jpg",
+    image: "/images/sustainable-habits.jpg",
     imageAlt:
       "A calm morning arrangement with water, fruit, walking shoes and a notebook",
     sections: [
@@ -382,7 +382,7 @@ export const insights: Insight[] = [
     published: "2026-03-05",
     updated: "2026-06-29",
     readingTime: "10 min read",
-    image: "/images/volkov-research-desk.jpg",
+    image: "/images/healthcare-appointment.jpg",
     imageAlt:
       "An open question list and calendar prepared for a professional appointment",
     sections: [
