@@ -3207,3 +3207,59 @@ p {
 .site-footer { background: #0b0910; color: #eeeafd; }
 .footer-bottom { border-color: var(--agency-line); }
 .footer-email { color: var(--agency-violet); }
+
+/* Homepage protection from legacy editorial styles: a full, high-density standards grid. */
+.agency-home .standards-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  border: 0;
+  background: transparent;
+}
+
+.agency-home .standards-list article {
+  min-height: 214px;
+  padding: 31px;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-content: start;
+  gap: 20px;
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 2%));
+}
+
+.agency-home .standards-list article > div {
+  display: block;
+}
+
+.agency-home .standards-list > article > span {
+  color: var(--agency-violet);
+  font-family: var(--font-mono), monospace;
+  font-size: .7rem;
+  font-weight: 500;
+}
+
+.agency-home .standards-list h3 {
+  margin: 0 0 10px;
+  max-width: none;
+  color: var(--agency-text);
+  font-family: var(--body);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: 1.1;
+}
+
+.agency-home .standards-list p {
+  max-width: none;
+  margin: 0;
+  color: #c2bbd0;
+  font-size: .91rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 680px) {
+  .agency-home .standards-list { grid-template-columns: 1fr; }
+  .agency-home .standards-list article { min-height: auto; padding: 25px; }
+}
