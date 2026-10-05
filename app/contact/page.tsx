@@ -6,7 +6,7 @@ import { createMetadata } from "@/src/lib/metadata";
 
 export const metadata = createMetadata(
   "Contact",
-  "Contact VOLKOV LTDA by secure form, email or telephone.",
+  "Contact VOLKOV LTDA to discuss paid media operations and growth support.",
   "/contact",
 );
 
@@ -16,10 +16,11 @@ export default function ContactPage() {
       <section className="page-hero page-hero-beige">
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
         <p className="eyebrow">CONTACT VOLKOV</p>
-        <h1>LET&apos;S MAKE THE QUESTION CLEAR.</h1>
+        <h1>START WITH THE BUSINESS CONTEXT.</h1>
         <p>
-          Editorial feedback, commercial inquiries and correction requests are
-          welcome. Please do not send medical records or sensitive health data.
+          Tell us about your market, offer and the growth challenge you are
+          working through. Please do not send payment details, access
+          credentials or other sensitive information through this form.
         </p>
       </section>
       <section className="contact-layout">
@@ -45,8 +46,8 @@ export default function ContactPage() {
             {company.phone.internationalDisplay}
           </a>
           <p>
-            Response times depend on message volume. We do not promise medical
-            guidance or emergency support.
+            Response times depend on message volume. Contacting us does not
+            create a client relationship or guarantee service availability.
           </p>
         </div>
         <div>

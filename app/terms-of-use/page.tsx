@@ -12,7 +12,7 @@ export default function TermsPage() {
   return (
     <LegalPageLayout
       title="Terms of Use"
-      intro="These terms define the informational purpose and practical limits of this website."
+      intro="These terms define the purpose, acceptable use and practical limits of this website."
     >
       <h2>Acceptance and audience</h2>
       <p>
@@ -20,13 +20,12 @@ export default function TermsPage() {
         website is intended for adults. If you do not agree, do not continue to
         use it.
       </p>
-      <h2>Informational purpose</h2>
+      <h2>Website and service information</h2>
       <p>
-        VOLKOV publishes general educational information. Content is not medical
-        advice, diagnosis or treatment and does not create a professional,
-        fiduciary or healthcare relationship. Information may become outdated
-        and should be checked against current labels, sources and professional
-        guidance.
+        VOLKOV provides general information about paid media operations,
+        conversion strategy and related services. Site content does not create a
+        client, agency, employment, legal, tax or financial-advisory relationship.
+        A written agreement is required before any service engagement begins.
       </p>
       <h2>Permitted use and intellectual property</h2>
       <p>
@@ -37,22 +36,21 @@ export default function TermsPage() {
         design and presentation are protected by applicable intellectual
         property law.
       </p>
-      <h2>External links, affiliates and purchases</h2>
+      <h2>Advertising platforms and third parties</h2>
       <p>
-        Some links lead to independent third parties and may be affiliate links.
-        A commission may be earned from a qualifying purchase. Purchases are
-        completed on third-party sites: the merchant manages pricing, billing,
-        delivery, refunds, subscriptions, product support and its own terms.
-        VOLKOV is not the merchant or manufacturer unless a page explicitly and
-        accurately states otherwise.
+        Advertising platforms, media vendors and other third parties operate
+        independently and under their own rules. VOLKOV is not affiliated with,
+        endorsed by or sponsored by any advertising platform. Platform review,
+        account approval and campaign delivery remain subject to each platform&apos;s
+        independent policies and decisions.
       </p>
       <h2>Third-party information and no warranties</h2>
       <p>
-        Product details may originate with a manufacturer or merchant and can
-        change. Although we aim for clarity and reasonable accuracy, the website
-        is provided on an as-available basis without guarantees of completeness,
+        Platform policies, market conditions and campaign results can change.
+        Although we aim for clarity and reasonable accuracy, the website is
+        provided on an as-available basis without guarantees of completeness,
         uninterrupted availability, fitness for a particular purpose or a
-        specific outcome.
+        specific advertising or business outcome.
       </p>
       <h2>Limitation of liability</h2>
       <p>

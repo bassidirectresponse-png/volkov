@@ -34,7 +34,8 @@ export default function PrivacyPolicyPage() {
         including your name, email address, optional company, subject, message
         and consent. If the newsletter is enabled, we may process the email
         address, consent record and subscription status required to provide and
-        manage it. Please do not submit health records or other sensitive data.
+        manage it. Please do not submit campaign-account credentials, payment
+        data or other sensitive information through this website.
       </p>
       <p>
         Our hosting, security and delivery providers may process technical
@@ -45,10 +46,10 @@ export default function PrivacyPolicyPage() {
       </p>
       <h2>Purposes and legal bases</h2>
       <ul>
-        <li>Respond to inquiries and correction requests.</li>
+        <li>Respond to business inquiries and service requests.</li>
         <li>Operate, secure, diagnose and improve the website.</li>
         <li>Provide a requested newsletter and manage opt-in or unsubscribe.</li>
-        <li>Measure aggregate usage or affiliate referrals after consent.</li>
+        <li>Measure aggregate website usage after consent.</li>
         <li>Meet legal obligations and protect legitimate rights.</li>
       </ul>
       <p>
@@ -59,7 +60,7 @@ export default function PrivacyPolicyPage() {
       </p>
       <h2>Service providers, merchants and transfers</h2>
       <p>
-        Hosting, email, security, analytics and affiliate technology providers
+        Hosting, email, security and analytics technology providers
         may receive limited data needed to perform their services. Clicking an
         external link transfers you to an independent website governed by its
         own privacy policy. Providers may operate in other countries; where

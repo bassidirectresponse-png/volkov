@@ -36,7 +36,7 @@ export function Header() {
           })}
         </nav>
         <Link className="button button-light header-cta" href="/contact">
-          Contact Us
+          Start a conversation
         </Link>
         <MobileNavigation />
       </div>

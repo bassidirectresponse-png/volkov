@@ -11,8 +11,8 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-lede">
-        <p>Conversation is part of clarity.</p>
-        <h2>LET&apos;S CONNECT.</h2>
+        <p>Start with scope, not assumptions.</p>
+        <h2>LET&apos;S BUILD MOMENTUM.</h2>
         <a className="footer-email" href={`mailto:${company.email}`}>
           {company.email}
           <ArrowUpRight aria-hidden="true" />
@@ -36,7 +36,6 @@ export function Footer() {
               {item.label}
             </Link>
           ))}
-          <Link href="/products">Product Research</Link>
         </nav>
         <nav aria-label="Legal links">
           {legalNavigation.map((item) => (
@@ -49,10 +48,9 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <p>
-          VOLKOV publishes independent educational content and may receive
-          compensation through affiliate relationships. VOLKOV does not provide
-          medical advice and does not manufacture products that may be
-          mentioned on this website.
+          VOLKOV provides paid-media strategy, campaign operations and
+          conversion support. We do not guarantee advertising approval, lead
+          volume, revenue, sales or any specific business outcome.
         </p>
         <p>
           © {new Date().getFullYear()} {company.legalName}. All rights reserved.

@@ -18,7 +18,7 @@ export default function CookiePolicyPage() {
       <p>
         Cookies and similar technologies store or read small pieces of
         information on a device. They can support essential operation, remember
-        choices, measure aggregate usage or help attribute an external referral.
+        choices or measure aggregate usage.
       </p>
       <h2>Categories</h2>
       <h3>Strictly necessary</h3>
@@ -37,12 +37,11 @@ export default function CookiePolicyPage() {
         technical performance. Analytics is disabled by default and should load
         only after consent when enabled operationally.
       </p>
-      <h3>Advertising and affiliate measurement</h3>
+      <h3>Advertising measurement</h3>
       <p>
-        May help a merchant or affiliate program attribute a qualifying
-        purchase to a referral. These technologies are disabled by default on
-        VOLKOV pages and may also be governed by the independent merchant&apos;s
-        choices and policy after you leave this site.
+        May help us understand an approved campaign or referral source. These
+        technologies are disabled by default on VOLKOV pages and load only after
+        consent when enabled operationally.
       </p>
       <h2>Your choices</h2>
       <p>

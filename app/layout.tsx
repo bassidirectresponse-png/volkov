@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Anton, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/src/components/layout/header";
 import { Footer } from "@/src/components/layout/footer";
 import { CookieConsent } from "@/src/components/cookies/cookie-consent";
@@ -10,19 +9,6 @@ import {
   websiteJsonLd,
 } from "@/src/lib/structured-data";
 import "./globals.css";
-
-const anton = Anton({
-  variable: "--font-anton",
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(company.siteUrl),
@@ -71,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${anton.variable} ${jakarta.variable}`}>
+      <body>
         <Header />
         {children}
         <Footer />

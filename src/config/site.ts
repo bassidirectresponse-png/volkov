@@ -2,9 +2,9 @@ import { company } from "./company";
 
 export const site = {
   name: company.publicName,
-  title: "VOLKOV — Independent Wellness Research",
+  title: "VOLKOV — Paid Media & Growth Operations",
   description:
-    "Independent wellness research, responsible product discovery and transparent consumer information.",
+    "Paid media strategy, campaign operations and conversion systems for local businesses and digital offers.",
   locale: "en_US",
-  author: "VOLKOV Editorial Team",
+  author: "VOLKOV Growth Operations",
 } as const;
